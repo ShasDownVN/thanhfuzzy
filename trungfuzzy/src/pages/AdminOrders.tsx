@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import type { Order, OrderStatus } from "../types/product";
 import AdminNavigation from "../components/AdminNavigation";
+import { tokenStore } from "../services/api";
 
 const API_URL = import.meta.env.VITE_API_URL ?? "http://localhost:3001/api";
 const nextStatuses: Record<OrderStatus, OrderStatus[]> = {
@@ -14,8 +15,15 @@ export default function AdminOrders() {
   const [message, setMessage] = useState("");
   const [filter, setFilter] = useState<"all" | OrderStatus>("all");
   const [updatingId, setUpdatingId] = useState("");
+  const adminHeaders = () => {
+    const token = tokenStore.get();
+    return {
+      ...(adminKey ? { "X-Admin-Key": adminKey } : {}),
+      ...(token ? { Authorization: `Bearer ${token}` } : {})
+    };
+  };
   const load = async () => {
-    const response = await fetch(`${API_URL}/orders`, { headers: { "X-Admin-Key": adminKey } });
+    const response = await fetch(`${API_URL}/orders`, { headers: adminHeaders() });
     const data = await response.json();
     if (!response.ok) return setMessage(data.message);
     setOrders(data.orders); setMessage("");
@@ -25,7 +33,7 @@ export default function AdminOrders() {
   async function update(order: Order, status: OrderStatus) {
     setUpdatingId(order.id);
     const response = await fetch(`${API_URL}/orders/${order.id}`, {
-      method: "PATCH", headers: { "Content-Type": "application/json", "X-Admin-Key": adminKey },
+      method: "PATCH", headers: { "Content-Type": "application/json", ...adminHeaders() },
       body: JSON.stringify({ status, note: `Admin changed status to ${status}.` })
     });
     const data = await response.json();

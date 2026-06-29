@@ -11,7 +11,7 @@ export async function GET(request: NextRequest) {
   try {
     const orders = await readOrders();
     try {
-      requireAdmin(request);
+      await requireAdmin(request);
       return apiResponse({ orders: orders.sort((a, b) => b.createdAt.localeCompare(a.createdAt)) });
     } catch {
       const userId = await requireUserId(request);

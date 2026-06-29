@@ -12,7 +12,7 @@ export async function GET(_request: Request, context: Context) {
 
 export async function PATCH(request: Request, context: Context) {
   try {
-    requireAdmin(request);
+    await requireAdmin(request);
     const { productId } = await context.params;
     const parsed = productSchema.partial().safeParse(await request.json());
     if (!parsed.success) return apiResponse({ message: parsed.error.issues[0].message }, 400);
@@ -33,7 +33,7 @@ export async function PATCH(request: Request, context: Context) {
 
 export async function DELETE(request: Request, context: Context) {
   try {
-    requireAdmin(request);
+    await requireAdmin(request);
     const { productId } = await context.params;
     const products = await readProducts();
     const index = products.findIndex((item) => item.id === productId);

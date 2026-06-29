@@ -6,7 +6,7 @@ import { categorySchema } from "../../../lib/validation";
 export async function GET(request: Request) {
   const includeHidden = new URL(request.url).searchParams.get("includeHidden") === "true";
   if (includeHidden) {
-    try { requireAdmin(request); } catch { return apiResponse({ message: "Admin key không hợp lệ." }, 401); }
+    try { await requireAdmin(request); } catch { return apiResponse({ message: "Admin key hoặc tài khoản Admin không hợp lệ." }, 401); }
   }
   const categories = await readCategories();
   return apiResponse({ categories: includeHidden ? categories : categories.filter((item) => item.active) });
@@ -14,7 +14,7 @@ export async function GET(request: Request) {
 
 export async function POST(request: Request) {
   try {
-    requireAdmin(request);
+    await requireAdmin(request);
     const parsed = categorySchema.safeParse(await request.json());
     if (!parsed.success) return apiResponse({ message: parsed.error.issues[0].message }, 400);
     const categories = await readCategories();

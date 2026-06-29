@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import AdminNavigation from "../components/AdminNavigation";
 import type { User } from "../types/user";
+import { tokenStore } from "../services/api";
 
 const API_URL = import.meta.env.VITE_API_URL ?? "http://localhost:3001/api";
 
@@ -13,11 +14,18 @@ export default function AdminUsers() {
   const [status, setStatus] = useState("all");
   const [message, setMessage] = useState("");
   const [updatingId, setUpdatingId] = useState("");
+  const adminHeaders = () => {
+    const token = tokenStore.get();
+    return {
+      ...(adminKey ? { "X-Admin-Key": adminKey } : {}),
+      ...(token ? { Authorization: `Bearer ${token}` } : {})
+    };
+  };
 
   async function load() {
     const query = new URLSearchParams({ search, status });
     const response = await fetch(`${API_URL}/admin/users?${query}`, {
-      headers: { "X-Admin-Key": adminKey }
+      headers: adminHeaders()
     });
     const data = await response.json();
     if (!response.ok) return setMessage(data.message);
@@ -32,7 +40,7 @@ export default function AdminUsers() {
     setUpdatingId(user.id);
     const response = await fetch(`${API_URL}/admin/users/${user.id}`, {
       method: "PATCH",
-      headers: { "Content-Type": "application/json", "X-Admin-Key": adminKey },
+      headers: { "Content-Type": "application/json", ...adminHeaders() },
       body: JSON.stringify(changes)
     });
     const data = await response.json();
@@ -46,7 +54,7 @@ export default function AdminUsers() {
     setUpdatingId(user.id);
     const response = await fetch(`${API_URL}/admin/users/${user.id}`, {
       method: "DELETE",
-      headers: { "X-Admin-Key": adminKey }
+      headers: adminHeaders()
     });
     const data = await response.json();
     if (!response.ok) setMessage(data.message);

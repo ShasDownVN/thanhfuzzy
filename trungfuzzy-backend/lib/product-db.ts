@@ -1,5 +1,7 @@
 import type { Category, Product } from "./types";
 import { readJsonStore, writeJsonStore } from "./json-store";
+import { verifyAccessToken } from "./jwt";
+import { readUsers } from "./db";
 
 export const defaultCategories: Category[] = [
   { id: "sofa", name: "Sofa", icon: "/assets/images/svg/sofa.svg", active: true },
@@ -46,7 +48,16 @@ export const writeProducts = (products: Product[]) => writeJsonStore("products.j
 export const readCategories = () => readSeeded("categories.json", defaultCategories);
 export const writeCategories = (categories: Category[]) => writeJsonStore("categories.json", categories);
 
-export function requireAdmin(request: Request) {
+export async function requireAdmin(request: Request) {
   const key = request.headers.get("x-admin-key");
-  if (!key || key !== (process.env.ADMIN_API_KEY ?? "dev-admin-key")) throw new Error("ADMIN_UNAUTHORIZED");
+  if (key && key === (process.env.ADMIN_API_KEY ?? "dev-admin-key")) return;
+
+  const authorization = request.headers.get("authorization");
+  if (authorization?.startsWith("Bearer ")) {
+    const { userId } = await verifyAccessToken(authorization.slice(7));
+    const user = (await readUsers()).find((item) => item.id === userId);
+    if (user?.role === "admin" && user.status === "active") return;
+  }
+
+  throw new Error("ADMIN_UNAUTHORIZED");
 }

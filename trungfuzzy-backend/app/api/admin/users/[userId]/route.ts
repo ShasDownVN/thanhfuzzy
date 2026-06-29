@@ -12,7 +12,7 @@ const updateSchema = z.object({
 
 export async function PATCH(request: Request, context: Context) {
   try {
-    requireAdmin(request);
+    await requireAdmin(request);
     const parsed = updateSchema.safeParse(await request.json());
     if (!parsed.success) return apiResponse({ message: parsed.error.issues[0].message }, 400);
     const { userId } = await context.params;
@@ -29,7 +29,7 @@ export async function PATCH(request: Request, context: Context) {
 
 export async function DELETE(request: Request, context: Context) {
   try {
-    requireAdmin(request);
+    await requireAdmin(request);
     const { userId } = await context.params;
     const users = await readUsers();
     const user = users.find((item) => item.id === userId);

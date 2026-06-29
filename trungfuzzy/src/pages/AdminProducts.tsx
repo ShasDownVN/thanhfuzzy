@@ -1,6 +1,7 @@
 import { FormEvent, useEffect, useState } from "react";
 import type { Category, Product } from "../types/product";
 import AdminNavigation from "../components/AdminNavigation";
+import { tokenStore } from "../services/api";
 
 const API_URL = import.meta.env.VITE_API_URL ?? "http://localhost:3001/api";
 const blank = { name: "", description: "", categoryId: "chair", price: "0", compareAtPrice: "0", stock: "0", images: "/assets/images/product/1.png", colors: "#122636, #d6a354", sizes: "S, M, L", active: true };
@@ -15,7 +16,12 @@ export default function AdminProducts() {
   const [editingCategoryId, setEditingCategoryId] = useState("");
   const [message, setMessage] = useState("");
 
-  const headers = { "Content-Type": "application/json", "X-Admin-Key": adminKey };
+  const token = tokenStore.get();
+  const headers = {
+    "Content-Type": "application/json",
+    ...(adminKey ? { "X-Admin-Key": adminKey } : {}),
+    ...(token ? { Authorization: `Bearer ${token}` } : {})
+  };
   async function load() {
     const [productData, categoryData] = await Promise.all([
       fetch(`${API_URL}/products?limit=30&includeHidden=true`, { headers }).then((r) => r.json()),

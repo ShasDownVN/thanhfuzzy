@@ -18,7 +18,7 @@ export async function GET(request: NextRequest, context: Context) {
     const { orderId } = await context.params;
     const order = (await readOrders()).find((item) => item.id === orderId);
     if (!order) return apiResponse({ message: "Không tìm thấy đơn hàng." }, 404);
-    try { requireAdmin(request); } catch {
+    try { await requireAdmin(request); } catch {
       const userId = await requireUserId(request);
       if (order.userId !== userId) return apiResponse({ message: "Bạn không có quyền xem đơn hàng này." }, 403);
     }
@@ -28,7 +28,7 @@ export async function GET(request: NextRequest, context: Context) {
 
 export async function PATCH(request: NextRequest, context: Context) {
   try {
-    requireAdmin(request);
+    await requireAdmin(request);
     const { orderId } = await context.params;
     const parsed = orderStatusSchema.safeParse(await request.json());
     if (!parsed.success) return apiResponse({ message: parsed.error.issues[0].message }, 400);

@@ -5,7 +5,7 @@ import { publicUser } from "../../../../lib/types";
 
 export async function GET(request: Request) {
   try {
-    requireAdmin(request);
+    await requireAdmin(request);
     const url = new URL(request.url);
     const search = (url.searchParams.get("search") ?? "").toLowerCase();
     const status = url.searchParams.get("status");
