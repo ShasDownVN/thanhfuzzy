@@ -1,9 +1,5 @@
-import { promises as fs } from "node:fs";
-import path from "node:path";
 import type { Category, Product } from "./types";
-
-const productPath = path.join(process.cwd(), "data", "products.json");
-const categoryPath = path.join(process.cwd(), "data", "categories.json");
+import { readJsonStore, writeJsonStore } from "./json-store";
 
 export const defaultCategories: Category[] = [
   { id: "sofa", name: "Sofa", icon: "/assets/images/svg/sofa.svg", active: true },
@@ -40,24 +36,15 @@ export const defaultProducts: Product[] = names.map((name, index) => {
   };
 });
 
-async function readJson<T>(file: string, fallback: T): Promise<T> {
-  try {
-    const value = JSON.parse(await fs.readFile(file, "utf8")) as T;
-    return Array.isArray(value) && value.length === 0 ? fallback : value;
-  } catch {
-    return fallback;
-  }
+async function readSeeded<T>(name: string, fallback: T): Promise<T> {
+  const value = await readJsonStore<T>(name, fallback);
+  return Array.isArray(value) && value.length === 0 ? fallback : value;
 }
 
-async function writeJson(file: string, value: unknown) {
-  await fs.mkdir(path.dirname(file), { recursive: true });
-  await fs.writeFile(file, JSON.stringify(value, null, 2), "utf8");
-}
-
-export const readProducts = () => readJson(productPath, defaultProducts);
-export const writeProducts = (products: Product[]) => writeJson(productPath, products);
-export const readCategories = () => readJson(categoryPath, defaultCategories);
-export const writeCategories = (categories: Category[]) => writeJson(categoryPath, categories);
+export const readProducts = () => readSeeded("products.json", defaultProducts);
+export const writeProducts = (products: Product[]) => writeJsonStore("products.json", products);
+export const readCategories = () => readSeeded("categories.json", defaultCategories);
+export const writeCategories = (categories: Category[]) => writeJsonStore("categories.json", categories);
 
 export function requireAdmin(request: Request) {
   const key = request.headers.get("x-admin-key");
