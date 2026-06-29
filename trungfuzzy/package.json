@@ -1,0 +1,23 @@
+{
+  "scripts": {
+    "dev": "concurrently --kill-others-on-fail --names API,WEB \"npm.cmd --prefix ../trungfuzzy-backend run dev\" \"vite --host 0.0.0.0\"",
+    "dev:client": "vite --host 0.0.0.0",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "test:mobile": "playwright test --config=playwright.config.ts",
+    "test:pwa": "playwright test --config=playwright.pwa.config.ts"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-router-dom": "latest",
+    "react-swipeable": "^7.0.2",
+    "typescript": "latest",
+    "vite": "latest"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "concurrently": "^9.2.1"
+  }
+}

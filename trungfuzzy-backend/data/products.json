@@ -1,0 +1,479 @@
+[
+  {
+    "id": "product-1",
+    "name": "Buddy Chair",
+    "description": "Buddy Chair with modern comfort, durable materials and a mobile-friendly shopping experience.",
+    "categoryId": "chair",
+    "price": 14,
+    "compareAtPrice": 20,
+    "stock": 4,
+    "images": [
+      "/assets/images/product/1.png",
+      "/assets/images/product/2.png"
+    ],
+    "colors": [
+      "#122636",
+      "#d6a354",
+      "#e8e4dd"
+    ],
+    "sizes": [
+      "Standard",
+      "Large"
+    ],
+    "rating": 4,
+    "active": true,
+    "createdAt": "2025-12-31T17:00:00.000Z",
+    "updatedAt": "2026-06-29T03:59:17.353Z"
+  },
+  {
+    "id": "product-2",
+    "name": "Wingback Chair",
+    "description": "Wingback Chair with modern comfort, durable materials and a mobile-friendly shopping experience.",
+    "categoryId": "chair",
+    "price": 21,
+    "compareAtPrice": 28,
+    "stock": 8,
+    "images": [
+      "/assets/images/product/2.png",
+      "/assets/images/product/3.png"
+    ],
+    "colors": [
+      "#122636",
+      "#d6a354",
+      "#e8e4dd"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "rating": 4.1,
+    "active": true,
+    "createdAt": "2026-01-01T17:00:00.000Z",
+    "updatedAt": "2026-01-01T17:00:00.000Z"
+  },
+  {
+    "id": "product-3",
+    "name": "Winston Chair",
+    "description": "Winston Chair with modern comfort, durable materials and a mobile-friendly shopping experience.",
+    "categoryId": "chair",
+    "price": 28,
+    "compareAtPrice": 36,
+    "stock": 11,
+    "images": [
+      "/assets/images/product/3.png",
+      "/assets/images/product/4.png"
+    ],
+    "colors": [
+      "#122636",
+      "#d6a354",
+      "#e8e4dd"
+    ],
+    "sizes": [
+      "Standard",
+      "Large"
+    ],
+    "rating": 4.2,
+    "active": true,
+    "createdAt": "2026-01-02T17:00:00.000Z",
+    "updatedAt": "2026-01-02T17:00:00.000Z"
+  },
+  {
+    "id": "product-4",
+    "name": "Beige Chair",
+    "description": "Beige Chair with modern comfort, durable materials and a mobile-friendly shopping experience.",
+    "categoryId": "chair",
+    "price": 35,
+    "compareAtPrice": 44,
+    "stock": 14,
+    "images": [
+      "/assets/images/product/4.png",
+      "/assets/images/product/5.png"
+    ],
+    "colors": [
+      "#122636",
+      "#d6a354",
+      "#e8e4dd"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "rating": 4.3,
+    "active": true,
+    "createdAt": "2026-01-03T17:00:00.000Z",
+    "updatedAt": "2026-01-03T17:00:00.000Z"
+  },
+  {
+    "id": "product-5",
+    "name": "Dining Chair",
+    "description": "Dining Chair with modern comfort, durable materials and a mobile-friendly shopping experience.",
+    "categoryId": "chair",
+    "price": 42,
+    "compareAtPrice": 52,
+    "stock": 17,
+    "images": [
+      "/assets/images/product/5.png",
+      "/assets/images/product/6.png"
+    ],
+    "colors": [
+      "#122636",
+      "#d6a354",
+      "#e8e4dd"
+    ],
+    "sizes": [
+      "Standard",
+      "Large"
+    ],
+    "rating": 4.4,
+    "active": true,
+    "createdAt": "2026-01-04T17:00:00.000Z",
+    "updatedAt": "2026-01-04T17:00:00.000Z"
+  },
+  {
+    "id": "product-6",
+    "name": "Harbour Chair",
+    "description": "Harbour Chair with modern comfort, durable materials and a mobile-friendly shopping experience.",
+    "categoryId": "chair",
+    "price": 49,
+    "compareAtPrice": 60,
+    "stock": 20,
+    "images": [
+      "/assets/images/product/6.png",
+      "/assets/images/product/7.png"
+    ],
+    "colors": [
+      "#122636",
+      "#d6a354",
+      "#e8e4dd"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "rating": 4.5,
+    "active": true,
+    "createdAt": "2026-01-05T17:00:00.000Z",
+    "updatedAt": "2026-01-05T17:00:00.000Z"
+  },
+  {
+    "id": "product-7",
+    "name": "Table Lamp",
+    "description": "Table Lamp with modern comfort, durable materials and a mobile-friendly shopping experience.",
+    "categoryId": "table",
+    "price": 56,
+    "compareAtPrice": 68,
+    "stock": 23,
+    "images": [
+      "/assets/images/product/7.png",
+      "/assets/images/product/8.png"
+    ],
+    "colors": [
+      "#122636",
+      "#d6a354",
+      "#e8e4dd"
+    ],
+    "sizes": [
+      "Standard",
+      "Large"
+    ],
+    "rating": 4,
+    "active": true,
+    "createdAt": "2026-01-06T17:00:00.000Z",
+    "updatedAt": "2026-01-06T17:00:00.000Z"
+  },
+  {
+    "id": "product-8",
+    "name": "Side Table",
+    "description": "Side Table with modern comfort, durable materials and a mobile-friendly shopping experience.",
+    "categoryId": "table",
+    "price": 63,
+    "compareAtPrice": 76,
+    "stock": 26,
+    "images": [
+      "/assets/images/product/8.png",
+      "/assets/images/product/9.png"
+    ],
+    "colors": [
+      "#122636",
+      "#d6a354",
+      "#e8e4dd"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "rating": 4.1,
+    "active": true,
+    "createdAt": "2026-01-07T17:00:00.000Z",
+    "updatedAt": "2026-01-07T17:00:00.000Z"
+  },
+  {
+    "id": "product-9",
+    "name": "Lounge Chair",
+    "description": "Lounge Chair with modern comfort, durable materials and a mobile-friendly shopping experience.",
+    "categoryId": "table",
+    "price": 70,
+    "compareAtPrice": 84,
+    "stock": 29,
+    "images": [
+      "/assets/images/product/9.png",
+      "/assets/images/product/10.png"
+    ],
+    "colors": [
+      "#122636",
+      "#d6a354",
+      "#e8e4dd"
+    ],
+    "sizes": [
+      "Standard",
+      "Large"
+    ],
+    "rating": 4.2,
+    "active": true,
+    "createdAt": "2026-01-08T17:00:00.000Z",
+    "updatedAt": "2026-01-08T17:00:00.000Z"
+  },
+  {
+    "id": "product-10",
+    "name": "Swing Chair",
+    "description": "Swing Chair with modern comfort, durable materials and a mobile-friendly shopping experience.",
+    "categoryId": "table",
+    "price": 77,
+    "compareAtPrice": 92,
+    "stock": 32,
+    "images": [
+      "/assets/images/product/10.png",
+      "/assets/images/product/11.png"
+    ],
+    "colors": [
+      "#122636",
+      "#d6a354",
+      "#e8e4dd"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "rating": 4.3,
+    "active": true,
+    "createdAt": "2026-01-09T17:00:00.000Z",
+    "updatedAt": "2026-01-09T17:00:00.000Z"
+  },
+  {
+    "id": "product-11",
+    "name": "Bubble Swing Chair",
+    "description": "Bubble Swing Chair with modern comfort, durable materials and a mobile-friendly shopping experience.",
+    "categoryId": "decor",
+    "price": 84,
+    "compareAtPrice": 100,
+    "stock": 35,
+    "images": [
+      "/assets/images/product/11.png",
+      "/assets/images/product/12.png"
+    ],
+    "colors": [
+      "#122636",
+      "#d6a354",
+      "#e8e4dd"
+    ],
+    "sizes": [
+      "Standard",
+      "Large"
+    ],
+    "rating": 4.4,
+    "active": true,
+    "createdAt": "2026-01-10T17:00:00.000Z",
+    "updatedAt": "2026-01-10T17:00:00.000Z"
+  },
+  {
+    "id": "product-12",
+    "name": "Double Bed Sheet",
+    "description": "Double Bed Sheet with modern comfort, durable materials and a mobile-friendly shopping experience.",
+    "categoryId": "decor",
+    "price": 91,
+    "compareAtPrice": 108,
+    "stock": 38,
+    "images": [
+      "/assets/images/product/12.png",
+      "/assets/images/product/13.png"
+    ],
+    "colors": [
+      "#122636",
+      "#d6a354",
+      "#e8e4dd"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "rating": 4.5,
+    "active": true,
+    "createdAt": "2026-01-11T17:00:00.000Z",
+    "updatedAt": "2026-01-11T17:00:00.000Z"
+  },
+  {
+    "id": "product-13",
+    "name": "Hanging Light",
+    "description": "Hanging Light with modern comfort, durable materials and a mobile-friendly shopping experience.",
+    "categoryId": "decor",
+    "price": 98,
+    "compareAtPrice": 116,
+    "stock": 41,
+    "images": [
+      "/assets/images/product/13.png",
+      "/assets/images/product/14.png"
+    ],
+    "colors": [
+      "#122636",
+      "#d6a354",
+      "#e8e4dd"
+    ],
+    "sizes": [
+      "Standard",
+      "Large"
+    ],
+    "rating": 4,
+    "active": true,
+    "createdAt": "2026-01-12T17:00:00.000Z",
+    "updatedAt": "2026-01-12T17:00:00.000Z"
+  },
+  {
+    "id": "product-14",
+    "name": "Modern Sofa",
+    "description": "Modern Sofa with modern comfort, durable materials and a mobile-friendly shopping experience.",
+    "categoryId": "decor",
+    "price": 105,
+    "compareAtPrice": 124,
+    "stock": 44,
+    "images": [
+      "/assets/images/product/14.png",
+      "/assets/images/product/15.png"
+    ],
+    "colors": [
+      "#122636",
+      "#d6a354",
+      "#e8e4dd"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "rating": 4.1,
+    "active": true,
+    "createdAt": "2026-01-13T17:00:00.000Z",
+    "updatedAt": "2026-01-13T17:00:00.000Z"
+  },
+  {
+    "id": "product-15",
+    "name": "Accent Chair",
+    "description": "Accent Chair with modern comfort, durable materials and a mobile-friendly shopping experience.",
+    "categoryId": "sofa",
+    "price": 112,
+    "compareAtPrice": 132,
+    "stock": 47,
+    "images": [
+      "/assets/images/product/15.png",
+      "/assets/images/product/16.png"
+    ],
+    "colors": [
+      "#122636",
+      "#d6a354",
+      "#e8e4dd"
+    ],
+    "sizes": [
+      "Standard",
+      "Large"
+    ],
+    "rating": 4.2,
+    "active": true,
+    "createdAt": "2026-01-14T17:00:00.000Z",
+    "updatedAt": "2026-01-14T17:00:00.000Z"
+  },
+  {
+    "id": "product-16",
+    "name": "Wooden Cabinet",
+    "description": "Wooden Cabinet with modern comfort, durable materials and a mobile-friendly shopping experience.",
+    "categoryId": "sofa",
+    "price": 119,
+    "compareAtPrice": 140,
+    "stock": 50,
+    "images": [
+      "/assets/images/product/16.png",
+      "/assets/images/product/17.png"
+    ],
+    "colors": [
+      "#122636",
+      "#d6a354",
+      "#e8e4dd"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "rating": 4.3,
+    "active": true,
+    "createdAt": "2026-01-15T17:00:00.000Z",
+    "updatedAt": "2026-01-15T17:00:00.000Z"
+  },
+  {
+    "id": "product-17",
+    "name": "Coffee Table",
+    "description": "Coffee Table with modern comfort, durable materials and a mobile-friendly shopping experience.",
+    "categoryId": "sofa",
+    "price": 126,
+    "compareAtPrice": 148,
+    "stock": 53,
+    "images": [
+      "/assets/images/product/17.png",
+      "/assets/images/product/18.png"
+    ],
+    "colors": [
+      "#122636",
+      "#d6a354",
+      "#e8e4dd"
+    ],
+    "sizes": [
+      "Standard",
+      "Large"
+    ],
+    "rating": 4.4,
+    "active": true,
+    "createdAt": "2026-01-16T17:00:00.000Z",
+    "updatedAt": "2026-01-16T17:00:00.000Z"
+  },
+  {
+    "id": "product-18",
+    "name": "Floor Lamp",
+    "description": "Floor Lamp with modern comfort, durable materials and a mobile-friendly shopping experience.",
+    "categoryId": "sofa",
+    "price": 133,
+    "compareAtPrice": 156,
+    "stock": 56,
+    "images": [
+      "/assets/images/product/18.png",
+      "/assets/images/product/19.png"
+    ],
+    "colors": [
+      "#122636",
+      "#d6a354",
+      "#e8e4dd"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "rating": 4.5,
+    "active": true,
+    "createdAt": "2026-01-17T17:00:00.000Z",
+    "updatedAt": "2026-01-17T17:00:00.000Z"
+  }
+]

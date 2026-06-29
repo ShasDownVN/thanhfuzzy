@@ -1,0 +1,28 @@
+[
+  {
+    "id": "107bdf8b-3491-440d-bf82-c18016bed9c6",
+    "email": "trung03@gmail.com",
+    "passwordHash": "$2b$12$s4ak279e8vDBdrb6YxBLuuISqfBrCcpennuMcJhbugISzQi5B74za",
+    "fullName": "Nguyễn Văn Y",
+    "phone": "",
+    "birthDate": "",
+    "avatar": "/assets/images/icons/profile1.png",
+    "addresses": [
+      {
+        "label": "Home",
+        "recipientName": "Nguyễn Văn Y",
+        "phone": "0256325455",
+        "street": "hội an",
+        "landmark": "ầefaef",
+        "city": "hà nội",
+        "postalCode": "âfaf",
+        "isDefault": true,
+        "id": "911c4074-1f83-4eeb-9807-45b7cc0f1b8b"
+      }
+    ],
+    "createdAt": "2026-06-29T03:57:43.810Z",
+    "updatedAt": "2026-06-29T04:13:57.685Z",
+    "role": "customer",
+    "status": "active"
+  }
+]
