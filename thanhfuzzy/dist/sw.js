@@ -1,4 +1,4 @@
-const VERSION = "fuzzy-pwa-v4";
+const VERSION = "fuzzy-pwa-v5";
 const STATIC_CACHE = `${VERSION}-static`;
 const RUNTIME_CACHE = `${VERSION}-runtime`;
 const APP_SHELL = [
@@ -7,6 +7,7 @@ const APP_SHELL = [
   "/offline.html",
   "/manifest.json",
   "/assets/images/logo/pwa-icon.svg",
+  "/assets/fuzzy-api-fallback.js",
   "/assets/css/style.css",
   "/assets/css/vendors/bootstrap.min.css",
   "/assets/css/vendors/iconsax.css",
