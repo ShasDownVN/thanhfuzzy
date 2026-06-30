@@ -1,4 +1,4 @@
-const VERSION = "fuzzy-pwa-v3";
+const VERSION = "fuzzy-pwa-v4";
 const STATIC_CACHE = `${VERSION}-static`;
 const RUNTIME_CACHE = `${VERSION}-runtime`;
 const APP_SHELL = [
@@ -65,7 +65,12 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  if (["style", "script", "image", "font"].includes(request.destination)) {
+  if (request.destination === "script") {
+    event.respondWith(fetch(request).catch(() => caches.match(request)));
+    return;
+  }
+
+  if (["style", "image", "font"].includes(request.destination)) {
     event.respondWith(
       caches.match(request).then((cached) => cached || fetch(request).then((response) => {
         if (response.ok) {
