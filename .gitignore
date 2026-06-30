@@ -1,5 +1,7 @@
 node_modules/
 dist/
+!thanhfuzzy/dist/
+!thanhfuzzy/dist/**
 .next/
 playwright-report/
 test-results/

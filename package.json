@@ -1,0 +1,14 @@
+{
+  "name": "thanhfuzzy-root",
+  "private": true,
+  "scripts": {
+    "postinstall": "npm --prefix thanhfuzzy install",
+    "dev": "npm --prefix thanhfuzzy run preview --",
+    "dev:client": "npm --prefix thanhfuzzy run dev:client --",
+    "build": "echo static deploy uses thanhfuzzy/dist",
+    "build:app": "npm --prefix thanhfuzzy run build --",
+    "preview": "npm --prefix thanhfuzzy run preview --",
+    "test:mobile": "npm --prefix thanhfuzzy run test:mobile --",
+    "test:pwa": "npm --prefix thanhfuzzy run test:pwa --"
+  }
+}

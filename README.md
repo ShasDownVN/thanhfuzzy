@@ -1,21 +1,21 @@
-# TrungFuzzy
+# ThanhFuzzy
 
 The project is split into two independent applications:
 
-- `trungfuzzy`: React + Vite user application (`http://localhost:5173`)
-- `trungfuzzy-backend`: Next.js API (`http://localhost:3001`)
+- `thanhfuzzy`: React + Vite user application (`http://localhost:5173`)
+- `thanhfuzzy-backend`: Next.js API (`http://localhost:3001`)
 
 ## Run locally
 
 From the frontend directory, one command starts both independent applications:
 
 ```powershell
-cd trungfuzzy
+cd thanhfuzzy
 npm.cmd run dev
 ```
 
-For separate terminals, run `npm.cmd run dev:client` in `trungfuzzy` and
-`npm.cmd run dev` in `trungfuzzy-backend`.
+For separate terminals, run `npm.cmd run dev:client` in `thanhfuzzy` and
+`npm.cmd run dev` in `thanhfuzzy-backend`.
 
 Before production, copy `.env.example` to `.env.local` in the backend and set a
 strong random `JWT_SECRET`.
@@ -73,7 +73,7 @@ Service Worker registration is enabled only in production builds to avoid stale
 Vite development assets:
 
 ```powershell
-cd trungfuzzy
+cd thanhfuzzy
 npm.cmd run build
 npm.cmd run preview
 ```

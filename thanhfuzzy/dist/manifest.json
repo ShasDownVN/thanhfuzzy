@@ -1,0 +1,41 @@
+{
+  "id": "/",
+  "name": "Thanh Fuzzy Shopping",
+  "short_name": "Fuzzy",
+  "description": "Ứng dụng mua sắm nội thất tối ưu cho thiết bị di động.",
+  "lang": "vi",
+  "start_url": "/landing",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#122636",
+  "icons": [
+    {
+      "src": "/assets/images/logo/pwa-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/images/logo/pwa-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Sản phẩm",
+      "short_name": "Sản phẩm",
+      "url": "/shop",
+      "icons": [{ "src": "/assets/images/logo/pwa-icon.svg", "sizes": "any", "type": "image/svg+xml" }]
+    },
+    {
+      "name": "Giỏ hàng",
+      "short_name": "Giỏ hàng",
+      "url": "/cart",
+      "icons": [{ "src": "/assets/images/logo/pwa-icon.svg", "sizes": "any", "type": "image/svg+xml" }]
+    }
+  ]
+}
