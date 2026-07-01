@@ -351,7 +351,7 @@
 
     try {
       const response = await nativeFetch(input, init);
-      if (response.ok) return response;
+      return response;
     } catch {
       /* Fall through to local demo API when the real backend is unavailable. */
     }

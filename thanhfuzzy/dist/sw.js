@@ -1,4 +1,4 @@
-const VERSION = "fuzzy-pwa-v11";
+const VERSION = "fuzzy-pwa-v12";
 const STATIC_CACHE = `${VERSION}-static`;
 const RUNTIME_CACHE = `${VERSION}-runtime`;
 const APP_SHELL = [
@@ -8,6 +8,8 @@ const APP_SHELL = [
   "/manifest.json",
   "/assets/images/logo/pwa-icon.svg",
   "/assets/fuzzy-api-fallback.js",
+  "/assets/login-auth-guard.js",
+  "/assets/admin-login.css",
   "/assets/ecommerce-mobile-enhancements.js?v=admin-profile-v4",
   "/assets/js/text-normalize.js",
   "/assets/css/style.css",

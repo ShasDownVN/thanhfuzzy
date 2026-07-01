@@ -1,0 +1,8 @@
+.admin-login-mode .auth-content h2 {
+  font-size: 30px;
+}
+
+.admin-login-mode .auth-form .auth-btn {
+  color: #fff;
+  background: #122636;
+}
