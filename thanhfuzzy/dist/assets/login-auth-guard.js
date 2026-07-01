@@ -94,6 +94,7 @@
   document.addEventListener("submit", async function (event) {
     const form = event.target;
     if (!(form instanceof HTMLFormElement) || !form.classList.contains("auth-form")) return;
+    if (location.pathname !== "/login") return;
 
     event.preventDefault();
     event.stopImmediatePropagation();

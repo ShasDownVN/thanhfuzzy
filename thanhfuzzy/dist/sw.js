@@ -1,4 +1,4 @@
-const VERSION = "fuzzy-pwa-v12";
+const VERSION = "fuzzy-pwa-v13";
 const STATIC_CACHE = `${VERSION}-static`;
 const RUNTIME_CACHE = `${VERSION}-runtime`;
 const APP_SHELL = [
