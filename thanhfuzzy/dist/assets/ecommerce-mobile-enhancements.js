@@ -91,26 +91,16 @@
       if (menu.querySelector(".admin-profile-link")) return;
 
       var firstItem = menu.querySelector("a, button");
-      [
-        ["/admin/users", "Admin qu\u1ea3n l\u00fd t\u00e0i kho\u1ea3n"],
-        ["/admin/products", "Admin qu\u1ea3n l\u00fd s\u1ea3n ph\u1ea9m"],
-        ["/admin/orders", "Admin qu\u1ea3n l\u00fd \u0111\u01a1n h\u00e0ng"]
-      ].reverse().forEach(function (item) {
-        var link = document.createElement("a");
-        link.className = "admin-profile-link";
-        link.href = item[0];
-        link.innerHTML = "<span>" + item[1] + "</span><b>\u203a</b>";
-        menu.insertBefore(link, firstItem || menu.firstChild);
-      });
+      var link = document.createElement("a");
+      link.className = "admin-profile-link";
+      link.href = "/admin";
+      link.innerHTML = "<span>Admin</span><b>\u203a</b>";
+      menu.insertBefore(link, firstItem || menu.firstChild);
     });
 
-    if (location.pathname === "/profile" && !document.querySelector(".profile-admin-shortcut")) {
-      var shortcut = document.createElement("a");
-      shortcut.className = "profile-admin-shortcut";
-      shortcut.href = "/admin/products";
-      shortcut.textContent = "Admin";
-      document.body.appendChild(shortcut);
-    }
+    document.querySelectorAll(".profile-admin-shortcut").forEach(function (shortcut) {
+      shortcut.remove();
+    });
 
     normalizeVisibleText(document.body);
   }
