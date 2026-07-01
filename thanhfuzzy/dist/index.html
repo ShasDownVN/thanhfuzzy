@@ -20,9 +20,34 @@
   <link rel="stylesheet" href="/assets/css/vendors/dropzone.min.css" />
   <link id="change-link" rel="stylesheet" href="/assets/css/style.css" />
   <script src="/assets/fuzzy-api-fallback.js"></script>
+  <script>
+    (function () {
+      var adminRoutes = {
+        "admin": "/admin/users",
+        "admin-users": "/admin/users",
+        "admin-products": "/admin/products",
+        "admin-categories": "/admin/products",
+        "admin-orders": "/admin/orders"
+      };
+
+      function normalizeAdminRoute() {
+        var hashRoute = location.hash.replace(/^#\/?/, "").split("?")[0];
+        var query = location.hash.indexOf("?") >= 0 ? location.hash.slice(location.hash.indexOf("?")) : "";
+        var pathRoute = location.pathname.replace(/^\/+/, "").replace(/\/+$/, "");
+        var next = adminRoutes[hashRoute] || adminRoutes[pathRoute];
+
+        if (next && location.pathname !== next) {
+          history.replaceState(null, "", next + query);
+        }
+      }
+
+      normalizeAdminRoute();
+      window.addEventListener("hashchange", normalizeAdminRoute);
+    })();
+  </script>
   <script type="module" crossorigin src="/assets/index-demo-login-v2.js"></script>
   <script src="/assets/js/text-normalize.js"></script>
-  <script defer src="/assets/ecommerce-mobile-enhancements.js?v=admin-profile-v2"></script>
+  <script defer src="/assets/ecommerce-mobile-enhancements.js?v=admin-profile-v3"></script>
   <link rel="stylesheet" crossorigin href="/assets/index-CDClwQ1P.css">
 </head>
 <body>
