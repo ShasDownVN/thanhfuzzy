@@ -104,7 +104,7 @@ for (var i = 0; i < plusMinus.length; ++i) {
 const cartBox = document.querySelectorAll(".cart-product-box");
 cartBox?.forEach((el) => {
   const deleteButton = el.querySelector(".trash");
-  deleteButton.addEventListener("click", function () {
+  deleteButton?.addEventListener("click", function () {
     this.closest(".cart-product-box").style.display = "none";
   });
 });

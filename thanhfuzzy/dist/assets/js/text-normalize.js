@@ -41,10 +41,19 @@
   addPair("\u00c2\u00b7", "\u00b7");
   addPair("\u00e2\u2020\u0090", "\u2190");
   addPair("\u00e2\u2020\u2019", "\u2192");
+  addPair("\u00e2\u20ac\u00b9", "\u2039");
+  addPair("\u00e2\u20ac\u00ba", "\u203a");
   addPair("\u00e2\u02dc\u00b7", "\u2637");
   addPair("\u00e2\u2122\u00a1", "\u2661");
+  addPair("\u00e2\u2122\u00a5", "\u2665");
   addPair("\u00e2\u02dc\u2026", "\u2605");
   addPair("\u00e2\u0153\u201c", "\u2713");
+  addPair("\u00e2\u02c6\u2019", "\u2212");
+  addPair("\u00c3\u2014", "\u00d7");
+  addPair("Kh\u00c3\u00b4ng c\u00c3\u00b3 k\u00e1\u00ba\u00bft n\u00e1\u00bb\u2018i m\u00e1\u00ba\u00a1ng", "Kh\u00f4ng c\u00f3 k\u1ebft n\u1ed1i m\u1ea1ng");
+  addPair("C\u00c3\u00a0i \u00c4\u2018\u00e1\u00ba\u00b7t Fuzzy", "C\u00e0i \u0111\u1eb7t Fuzzy");
+  addPair("C\u00c3\u00a0i \u00c4\u2018\u00e1\u00ba\u00b7t", "C\u00e0i \u0111\u1eb7t");
+  addPair("\u00c4\u0090\u00c3\u00b3ng", "\u0110\u00f3ng");
 
   const ignoredTags = new Set(["SCRIPT", "STYLE", "TEXTAREA", "INPUT"]);
   const watchedAttrs = ["title", "aria-label", "placeholder", "alt"];

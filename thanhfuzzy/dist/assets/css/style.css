@@ -135,6 +135,26 @@
 }
 
 /* base scss files */
+/* Profile admin shortcut */
+.profile-admin-shortcut {
+  position: fixed;
+  right: 18px;
+  bottom: 92px;
+  z-index: 1200;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 74px;
+  height: 42px;
+  padding: 0 16px;
+  border-radius: 8px;
+  background: #122636;
+  color: #fff !important;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: 0 8px 22px rgba(18, 38, 54, 0.22);
+}
+
 /*=====================
     Reset CSS start
 ==========================*/
